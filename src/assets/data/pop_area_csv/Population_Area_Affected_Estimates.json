@@ -1,0 +1,7 @@
+[
+{"Began":"2001-10-01","Ended":"2001-12-01","DB_ID":"1","Pop_Affected":"504.511138628","Area_Affected":"558.274751688","Analyzed_Duration":"61 days 00:00:00.000000000"},
+{"Began":"2002-10-12","Ended":"2002-11-02","DB_ID":"2","Pop_Affected":"508.333095621","Area_Affected":"620.872606656","Analyzed_Duration":"21 days 00:00:00.000000000"},
+{"Began":"2003-04-28","Ended":"2003-05-10","DB_ID":"3","Pop_Affected":"574.953088111","Area_Affected":"587.982016079","Analyzed_Duration":"12 days 00:00:00.000000000"},
+{"Began":"2003-11-05","Ended":"2003-11-19","DB_ID":"4","Pop_Affected":"264.283912036","Area_Affected":"422.610808102","Analyzed_Duration":"14 days 00:00:00.000000000"},
+{"Began":"2007-03-20","Ended":"2007-04-27","DB_ID":"5","Pop_Affected":"216.627477227","Area_Affected":"321.904657498","Analyzed_Duration":"38 days 00:00:00.000000000"}
+]
