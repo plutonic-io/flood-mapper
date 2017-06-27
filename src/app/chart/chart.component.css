@@ -5,6 +5,7 @@
 }
 
 .chartImg {
-    height: 220px; 
+    display: inline-block;
+    height: 28vh; 
     margin: auto;
 }

@@ -8,6 +8,14 @@
     flex:1;
     display: flex;
 }
+.table {
+    overflow-y: auto;
+    padding-top: 15px;
+}
+.chart {
+    overflow-y: auto;
+    padding-top: 15px;
+}
 .content md-grid-list {
     flex: 1
 }

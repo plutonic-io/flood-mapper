@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlsComponent implements OnInit {
 
-  selectedOverlay = 'flood_duration_threshold';
+  selectedRegion = 'rio-salado';
+  selectedOverlay = 'flood_extent_composite';
+  selectedComposite = 'population_affected';
   selectedBackground = 'landsat8_2005';
+  showComposite = true;
   showBackground = true;
   showOverlay = true;
   constructor() { }

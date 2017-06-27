@@ -1,31 +1,10 @@
 <md-list class="controlList">
-  <!--<md-list-item class="controlListItem">
+ <md-list-item class="controlListItem">
     <md-card>
       <md-card-content>
         <section class="example-section">
-          <md-checkbox class="example-margin" [(ngModel)]="showOverlay">Data Products</md-checkbox>
-          <br>
-          <md-select class="layerSelect" [(ngModel)]="selectedOverlay">
-            <md-option value="fac">Flood area extent (km<sup>2</sup>)</md-option>
-          </md-select>
-        </section>
-        </md-card-content>
-    </md-card>
-  </md-list-item>-->
-  <md-list-item class="controlListItem">
-    <md-card>
-      <md-card-content>
-        <section class="example-section">
-          <md-checkbox class="example-margin" [(ngModel)]="showOverlay">Data Products</md-checkbox>
-          <br>
-          <md-select class="layerSelect" [(ngModel)]="selectedOverlay">
-            <md-option value="termporally_weighted_composite">Temporally Weighted Composite</md-option>
-            <md-option value="population_affected">Population Affected Composite</md-option>
-            <md-option value="flood_duration">MODIS DFO Heat Map Composite</md-option>
-            <md-option value="flood_duration_threshold">Flood Duration (&gt;6 Days MODIS Composite)</md-option>
-            <md-option value="JRC_Permanent_Water">Event Image - JRC Permanent Water</md-option>
-            <md-option value="JRC_Seasonal_Water">Event Image - JRC Seasonal Water</md-option>
-            <md-option value="flood_duration_composite">Event Image -  Flood Duration in Composite-Days</md-option>
+          <md-select placeholder="Select a region" class="layerSelect" [(ngModel)]="selectedRegion">
+            <md-option value="rio-salado">Rio Salado</md-option>
           </md-select>
         </section>
         </md-card-content>
@@ -35,10 +14,45 @@
     <md-card>
       <md-card-content>
         <section class="example-section">
-          <md-checkbox class="example-margin" [(ngModel)]="showBackground">Background Layer</md-checkbox>
+          <md-checkbox class="example-margin" [(ngModel)]="showOverlay">Event Data</md-checkbox>
+          <br>
+          <md-select class="layerSelect" [(ngModel)]="selectedOverlay">
+            <md-option value="JRC_Permanent_Water">JRC Permanent Water</md-option>
+            <md-option value="JRC_Seasonal_Water">JRC Seasonal Water</md-option>
+            <md-option value="flood_duration_composite">Flood Duration</md-option>
+            <md-option value="flood_extent_composite">Flood Extent</md-option>
+          </md-select>
+        </section>
+        </md-card-content>
+    </md-card>
+  </md-list-item>
+  <md-list-item class="controlListItem">
+    <md-card>
+      <md-card-content>
+        <section class="example-section">
+          <md-checkbox class="example-margin" [(ngModel)]="showComposite">Regional Composites</md-checkbox>
+          <br>
+          <md-select class="layerSelect" [(ngModel)]="selectedComposite">
+            <md-option value="termporally_weighted_composite">Temporally Weighted Composite</md-option>
+            <md-option value="population_affected">Population Affected Composite</md-option>
+            <md-option value="flood_duration">MODIS DFO Heat Map Composite</md-option>
+            <md-option value="flood_duration_threshold">Flood Duration (&gt;6 Days MODIS Composite)</md-option>
+          </md-select>
+        </section>
+      </md-card-content>
+    </md-card>
+  </md-list-item>
+  <md-list-item class="controlListItem">
+    <md-card>
+      <md-card-content>
+        <section class="example-section">
+          <md-checkbox class="example-margin" [(ngModel)]="showBackground">Background Layers</md-checkbox>
           <br>
           <md-select class="layerSelect" [(ngModel)]="selectedBackground">
             <md-option  value="landsat8_2005">Landsat 8 2005 (Bands 6/5/4)</md-option>
+            <md-option  value="glcf">GLCF: Landsat Global Inland Water</md-option>
+            <md-option  value="MOD44W.005">MOD44W.005 Land Water Mask</md-option>
+
           </md-select>
         </section>
       </md-card-content>
