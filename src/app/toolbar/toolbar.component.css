@@ -5,3 +5,13 @@
 .title {
     text-align: right;
 }
+
+.logo {
+    filter: invert(95%);
+    padding: 10px;
+}
+
+.menu {
+    position: absolute;
+    right: 10px;
+}

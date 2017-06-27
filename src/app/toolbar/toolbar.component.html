@@ -1,5 +1,10 @@
 <md-toolbar color="primary">
-    <button md-icon-button [mdMenuTriggerFor]="menu">
+  
+      <img class="logo" src="assets/logo.png" height=32>  
+      <span class="title">Global Flood Map Database</span>
+   
+      <button class="menu" md-icon-button [mdMenuTriggerFor]="menu">
+       
         <md-icon>more_horiz</md-icon>
       </button>
       <md-menu #menu="mdMenu">
@@ -15,6 +20,5 @@
           <md-icon>account_box</md-icon>
           <span>Login</span>
         </button>
-    </md-menu>
-  <span class="title">Global Flood Map Database</span>
+      </md-menu>
 </md-toolbar>
