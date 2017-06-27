@@ -9,8 +9,22 @@ import { GoogleMapsApiService } from '../google-maps-api.service';
 export class MapComponent implements OnInit {
   map: google.maps.Map;
   constructor(private node: ElementRef) { }
+
+  public setOverlay(tileurl: string) {
+    let mapType = new google.maps.ImageMapType({
+      getTileUrl: function(coords: google.maps.Point, zoom: number) {
+        return tileurl.replace('{z}', zoom.toString())
+                      .replace('{x}', coords.x.toString())
+                      .replace('{y}', coords.y.toString())
+      },
+      tileSize: new google.maps.Size(256,256)
+    });
+    this.map.overlayMapTypes.setAt(1,mapType);
+  }
+
+
   ngOnInit() {
-    let self = this;
+    const self = this;
     GoogleMapsApiService.load('AIzaSyDWC3DTCJV37Ll9xNQetqne7hV-Zvg8yRg')
     .then(function(e) {
       self.map = new google.maps.Map(

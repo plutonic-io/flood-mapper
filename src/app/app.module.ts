@@ -10,6 +10,7 @@ import { MapComponent } from './map/map.component';
 import { TableComponent } from './table/table.component';
 import { ChartComponent } from './chart/chart.component';
 import { ControlsComponent } from './controls/controls.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ControlsComponent } from './controls/controls.component';
     TableComponent,
     ChartComponent,
     ControlsComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
