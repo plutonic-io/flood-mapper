@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlsComponent implements OnInit {
 
+  selectedOverlay = 'flood_duration_threshold';
+  selectedBackground = 'landsat8_2005';
+  showBackground = true;
+  showOverlay = true;
   constructor() { }
 
   ngOnInit() {

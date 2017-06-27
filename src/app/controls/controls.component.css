@@ -1,0 +1,25 @@
+:host {
+    position: absolute;
+    left: 0; right:0; top: 0; bottom: 0;
+    display: flex;
+}
+
+.controlList {
+    width: 100%;
+}
+
+.controlListItem {
+    
+}
+
+.controlListItem md-card {
+    margin: 5px;
+}
+
+.layerSelect {
+    width: 100%
+}
+
+.layerSelect {
+    width: 100%;
+}

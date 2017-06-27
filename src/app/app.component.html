@@ -1,15 +1,38 @@
-<md-toolbar color="primary">Global Flood Map Database</md-toolbar>
-<md-grid-list cols="4" rowHeight="1:1">
-  <md-grid-tile colspan="3">
+<md-toolbar color="primary">
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+        <md-icon>more_horiz</md-icon>
+      </button>
+      <md-menu #menu="mdMenu">
+        <button md-menu-item>
+          <md-icon>home</md-icon>
+          <span>Home</span>
+        </button>
+        <button md-menu-item>
+          <md-icon>layers</md-icon>
+          <span>Flood Maps</span>
+        </button>
+        <button md-menu-item>
+          <md-icon>notifications_off</md-icon>
+          <span>Something else..</span>
+        </button>
+        <button md-menu-item>
+          <md-icon>notifications_on</md-icon>
+          <span>More things....</span>
+        </button>
+    </md-menu>
+  <span class="title">Global Flood Map Database</span>
+</md-toolbar>
+<md-grid-list cols="9" rowHeight="16:9">
+  <md-grid-tile colspan="6" rowspan="6">
     <app-map></app-map>
   </md-grid-tile>
-  <md-grid-tile>
+  <md-grid-tile colspan="3" rowspan="6">
     <app-controls></app-controls>
   </md-grid-tile>
-  <md-grid-tile colspan="3">
-    <app-table></app-table>
-  </md-grid-tile>
-  <md-grid-tile>
+  <md-grid-tile colspan="6" rowspan="3">
     <app-chart></app-chart>
+  </md-grid-tile>
+  <md-grid-tile colspan="3" rowspan="3">
+    <app-table></app-table>
   </md-grid-tile>
 </md-grid-list>

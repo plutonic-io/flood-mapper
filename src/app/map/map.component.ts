@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { GoogleMapsApiService } from '../google-maps-api.service';
 
 @Component({
@@ -8,11 +8,20 @@ import { GoogleMapsApiService } from '../google-maps-api.service';
 })
 export class MapComponent implements OnInit {
   map: google.maps.Map;
-
-  constructor() { }
-
+  constructor(private node: ElementRef) { }
   ngOnInit() {
-    GoogleMaps.createClient({key: 'AIzaSyDWC3DTCJV37Ll9xNQetqne7hV-Zvg8yRg'})
+    let self = this;
+    GoogleMapsApiService.load('AIzaSyDWC3DTCJV37Ll9xNQetqne7hV-Zvg8yRg')
+    .then(function(e) {
+      self.map = new google.maps.Map(
+        self.node.nativeElement,
+        { center: new google.maps.LatLng(-32.5, -60.5),
+          streetViewControl: false,
+          zoom: 6
+      }
+      );
+
+    });
   }
 
 }

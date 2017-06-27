@@ -1,0 +1,11 @@
+:host {
+    overflow: hidden;
+}
+
+.title {
+    float: right;
+}
+md-grid-tile {
+    border-top: 1pt solid darkslategray;
+    border-left: 1pt solid darkslategray;
+}
